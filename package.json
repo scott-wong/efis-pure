@@ -5,7 +5,7 @@
   "main": "pure.js",
   "bin": {
     "pure": "bin/pure",
-    "fis-pure": "bin/pure"
+    "efis-pure": "bin/pure"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
