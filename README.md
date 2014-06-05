@@ -1,4 +1,4 @@
-fis-pure
+efis-pure
 ====
 
 基于FIS的纯前端模块化解决方案pure
@@ -36,7 +36,7 @@ pure可以自动压缩、合并页面引用到的所有资源，配置灵活，�
 ## 本地调试环境
 
 * 通过 `pure server start` 就能开启本地调试服务器。
-* 通过 `fis release --watch --live` 实现监听文件修改，自动刷新页面等功能。更多内容可以参考[辅助开发](http://fis.baidu.com/docs/beginning/assist.html)。
+* 通过 `pure release --watch --live` 实现监听文件修改，自动刷新页面等功能。更多内容可以参考[辅助开发](http://fis.baidu.com/docs/beginning/assist.html)。
 
 ## 如何使用
 
@@ -45,7 +45,7 @@ pure可以自动压缩、合并页面引用到的所有资源，配置灵活，�
 * 安装pure
 
    ```bash
-    npm install fis-pure -g
+    npm install efis-pure -g
     pure -v
    ```
 
@@ -55,10 +55,10 @@ pure可以自动压缩、合并页面引用到的所有资源，配置灵活，�
 
 ### 模块化加载
 
-如何使用模块化加载可以参考[fis-pure-demo](https://github.com/hefangshi/fis-pure-demo)，大致需要以下几个步骤
+如何使用模块化加载可以参考[efis-pure-demo](https://github.com/scottleo/efis-pure-demo)，大致需要以下几个步骤
 
-* 在需要模块化资源管理的页面，如index.html中引用[Mod](https://github.com/fex-team/mod)，注意[Mod](https://github.com/fex-team/mod)需放在lib文件夹内，因为这是模块化加载库，不能被模块化。 [示例](https://github.com/hefangshi/fis-pure-demo/blob/master/index.html#L7)
-* modules目录下添加页面脚本，如`main.js`，在页面中则可以通过`require('main')`加载静态资源。 [示例](https://github.com/hefangshi/fis-pure-demo/blob/master/index.html#L31-L33)
+* 在需要模块化资源管理的页面，如index.html中引用[Mod](https://github.com/fex-team/mod)，注意[Mod](https://github.com/fex-team/mod)需放在static文件夹内，因为这是模块化加载库，不能被模块化。 [示例](https://github.com/scottleo/efis-pure-demo/blob/master/index.html#L7)
+* modules目录下添加页面脚本，如`main.js`，在页面中则可以通过`require('main')`加载静态资源。 [示例](https://github.com/scottleo/efis-pure-demo/blob/master/index.html#L31-L33)
 * 需要引用其他模块，以jquery.js为例，只要在modules目录中添加代码，在main.js中就可以通过`var $ = require('jquery')`加载，在通过`pure release`发布后，页面就会自动加载jquery.js与main.js。
 
 ### 目录规范
@@ -68,9 +68,9 @@ pure自带了一个非常简单的目录规范
 * 所有组件化的脚本、样式、图片均放在modules目录中，可以按照组件划分目录，非模块化的脚本放在lib目录中。
 * page目录下的页面文件会发布到根目录，静态资源会发布到static目录。
 
-任何 ``目录规范``、``部署规范``、``编译规范`` 都是可配置的（[配置代码](https://github.com/fex-team/fis-pure/blob/master/pure.js#L27-L74)）。
+任何 ``目录规范``、``部署规范``、``编译规范`` 都是可配置的（[配置代码](https://github.com/scottleo/efis-pure/blob/master/pure.js#L27-L74)）。
 
-> 如果希望调整目录规范，建议将[配置代码](https://github.com/fex-team/fis-pure/blob/master/pure.js#L27-L74)中roadmap.path的部分整体复制到项目的fis-conf.js中再进行调整，避免配置不符合预期的问题。
+> 如果希望调整目录规范，建议将[配置代码](https://github.com/scottleo/efis-pure/blob/master/pure.js#L27-L74)中roadmap.path的部分整体复制到项目的fis-conf.js中再进行调整，避免配置不符合预期的问题。
 
 内置的规范包括：
 
@@ -98,7 +98,7 @@ pure自带了一个非常简单的目录规范
     </tr>
 </table>
 
-1.  ``lib`` 目录下的文件不被认为是模块化的，请直接在页面上使用script或link标签引用。
+1.  ``static`` 目录下的文件不被认为是模块化的，请直接在页面上使用script或link标签引用。
 
 ### 配置
 
