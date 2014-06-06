@@ -1,6 +1,6 @@
 {
   "name": "efis-pure",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A pure front end module solution with modjs.",
   "main": "pure.js",
   "bin": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "fis": "~1.7.8",
     "fis-parser-utc": "0.0.2",
+    "fis-parser-artc": "0.0.1",
     "fis-parser-less": "0.1.0",
     "fis-postprocessor-require-async": "0.0.8",
     "fis-prepackager-autoload": "0.0.x",
