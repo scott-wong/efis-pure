@@ -54,7 +54,7 @@ fis.config.merge({
       release: '${statics}/$&'
     }, {
       //前端模板
-      reg: '**.(tmpl|atpl)',
+      reg: /.*\.(tmpl|atpl)/,
       //当做类js文件处理，可以识别__inline, __uri等资源定位标识
       isJsLike: true,
       //只是内嵌，不用发布
@@ -90,6 +90,11 @@ fis.config.merge({
       noarg: true,
       noempty: true,
       node: true
+    }
+  },
+  project: {
+    fileType: {
+      text: 'atpl'
     }
   }
 });
