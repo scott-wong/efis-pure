@@ -1,6 +1,6 @@
 {
   "name": "efis-pure",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A pure front end module solution with modjs.",
   "main": "pure.js",
   "bin": {
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/scottleo/fis-pure.git"
+    "url": "https://github.com/scottleo/efis-pure.git"
   },
   "keywords": [
     "fis"
   ],
-  "author": "fis",
+  "author": "scottleo",
   "license": "BSD",
   "dependencies": {
     "fis": "~1.7.8",
