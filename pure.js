@@ -25,7 +25,7 @@ fis.config.merge({
       less: 'css'
     },
     path: [{
-      reg: /^\/page\/(.*)$/i,
+      reg: /^\/pages\/(.*)$/i,
       useCache: false,
       release: '$1'
     }, {
