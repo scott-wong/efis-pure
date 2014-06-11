@@ -1,6 +1,6 @@
 {
   "name": "efis-pure",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A pure front end module solution with modjs.",
   "main": "pure.js",
   "bin": {
@@ -28,6 +28,6 @@
     "fis-postpackager-autoload": "0.0.x",
     "fis-postpackager-simple": "0.0.x",
     "fis-postpackager-html-minifier":"0.0.x",
-    "fis-lint-jshint": "0.0.4"
+    "fis-lint-jshint": "0.0.x"
   }
 }

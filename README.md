@@ -1,7 +1,7 @@
 efis-pure
 ====
 [![NPM version](https://badge.fury.io/js/efis-pure.png)](http://badge.fury.io/js/efis-pure)
-[![NPM dependencies](https://david-dm.org/scottwang/efis-pure.png)](https://david-dm.org/scottwang/efis-pure)
+[![Dependencies Status](https://david-dm.org/scott-wong/efis-pure.png)](https://david-dm.org/scott-wong/efis-pure)
 
 基于FIS的纯前端模块化解决方案pure
 
