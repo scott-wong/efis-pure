@@ -27,7 +27,7 @@ fis.config.merge({
     path: [{
       reg: /^\/pages\/(.*)$/i,
       useCache: false,
-      release: '$1'
+      release: '${project.name}/$1'
     }, {
       //一级同名组件，可以引用短路径，比如modules/jquery/juqery.js
       //直接引用为var $ = require('jquery');
@@ -36,7 +36,7 @@ fis.config.merge({
       isMod: true,
       //id为文件夹名
       id: '$1',
-      release: '${statics}/$&'
+      release: '${statics}/${project.name}/$&'
     }, {
       //modules目录下的其他文件
       reg: /^\/modules\/(.*)\.(js)$/i,
@@ -44,13 +44,13 @@ fis.config.merge({
       isMod: true,
       //id是去掉modules和.js后缀中间的部分
       id: '$1',
-      release: '${statics}/$&'
+      release: '${statics}/${project.name}/$&'
     }, {
       //其他css文件
       reg: "**.css",
       //css文件会做csssprite处理
       useSprite: true,
-      release: '${statics}/$&'
+      release: '${statics}/${project.name}/$&'
     }, {
       //前端模板
       reg: /.*\.(tmpl|atpl)/,
@@ -61,13 +61,13 @@ fis.config.merge({
     }, {
       reg: /.*\.(html|jsp|tpl|vm|htm|asp|aspx)/,
       useCache: false,
-      release: '$&'
+      release: '${project.name}/$&'
     }, {
       reg: "README.md",
       release: false
     }, {
       reg: "**",
-      release: '${statics}/$&'
+      release: '${statics}/${project.name}/$&'
     }]
   },
   settings: {
