@@ -32,9 +32,10 @@ pure可以自动压缩、合并页面引用到的所有资源，配置灵活，�
 ## 前端语言支持
 
 * 直接编写less文件，无需额外编译工具支持。
+* 通过[swig](http://paularmstrong.github.io/swig/)实现页面继承，后缀stpl会编译为html文件。
 * 可以直接在脚本中通过 ```var template = __inline('path/to/template.tmpl'); ``` 引用经过了预编译的underscore模版，无需异步请求和解析。
 * 也支持直接在脚本中通过```var render = __inline('path/to/template.atpl');```
-引用经过了预编译的art-template模版，无需异步请求和解析。
+引用经过了预编译的[art-template](http://aui.github.io/artTemplate/)模版，无需异步请求和解析。
 * 更多的前端语言支持可以参考[辅助开发](http://fis.baidu.com/docs/beginning/assist.html)
 
 ## 本地调试环境
@@ -67,10 +68,10 @@ pure可以自动压缩、合并页面引用到的所有资源，配置灵活，�
 
 ### 目录规范
 
-pure自带了一个非常简单的目录规范
+pure自带了一个目录规范
 
 * 所有组件化的脚本、样式、图片均放在modules目录中，可以按照组件划分目录，非模块化的脚本放在lib目录中。
-* pages目录下的页面文件会发布到根目录，静态资源会发布到static目录。
+* pages目录下的页面文件会发布到项目根目录，静态资源会发布到static目录。
 
 任何 ``目录规范``、``部署规范``、``编译规范`` 都是可配置的（[配置代码](https://github.com/scottleo/efis-pure/blob/master/pure.js#L27-L74)）。
 

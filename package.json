@@ -1,6 +1,6 @@
 {
   "name": "efis-pure",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "description": "A pure front end module solution with modjs.",
   "main": "pure.js",
   "bin": {
@@ -20,10 +20,11 @@
   "author": "scott-wong",
   "license": "BSD",
   "dependencies": {
-    "fis": "~1.7.13",
-    "fis-parser-utc": "0.0.2",
-    "fis-parser-artc": "0.0.2",
-    "fis-parser-less": "0.1.0",
+    "fis": "~1.7.12",
+    "fis-parser-artc": "0.0.x",
+    "fis-parser-less": "0.1.x",
+    "fis-parser-swig": "0.0.x",
+    "fis-parser-utc": "0.0.x",
     "fis-postprocessor-require-async": "0.0.8",
     "fis-postpackager-autoload": "0.0.x",
     "fis-postpackager-simple": "0.0.x",
