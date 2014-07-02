@@ -13,8 +13,8 @@ fis.config.merge({
             stpl: 'swig'
         },
         postprocessor: {
-            js: "jswrapper, require-async",
-            html: "require-async"
+            js: 'jswrapper, require-async',
+            html: 'require-async'
         },
         postpackager: 'autoload, simple, html-minifier',
         lint: {
@@ -38,6 +38,15 @@ fis.config.merge({
             isMod: true,
             //id为文件夹名
             id: '$1',
+            release: '${statics}/${project.name}/$&'
+        }, {
+            //二级同名组件，可以引用短路径，比如modules/ui/header/header.js
+            //直接引用为var $ = require('ui/header');
+            reg: /^\/modules\/([^\/]+)\/([^\/]+)\/\2\.(js)$/i,
+            //是组件化的，会被jswrapper包装
+            isMod: true,
+            //id为文件夹名
+            id: '$1/$2',
             release: '${statics}/${project.name}/$&'
         }, {
             //modules目录下的其他文件
@@ -65,7 +74,7 @@ fis.config.merge({
             //只是内嵌，不用发布
             release: false
         }, {
-            reg: /.*\.(html|jsp|tpl|vm|htm|asp|aspx)/,
+            reg: /.*\.(html|jsp|tpl|vm|htm|asp|aspx|atpl|stpl)/,
             useCache: false,
             release: '${project.name}/$&'
         }, {
@@ -80,6 +89,12 @@ fis.config.merge({
         postprocessor: {
             jswrapper: {
                 type: 'amd'
+            }
+        },
+        postpackager: {
+            simple: {
+                //设置是否自动将零散资源进行打包
+                autoCombine: true
             }
         },
         jshint: {

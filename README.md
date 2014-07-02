@@ -101,6 +101,11 @@ pure自带了一个目录规范
         <td>jquery/jquery.scroll</td>
         <td>require('jquery/jquery.scroll');</td>
     </tr>
+    <tr>
+        <td>/modules/ui/header/header.js</td>
+        <td>jquery</td>
+        <td>var $ = require('ui/header');</td>
+    </tr>
 </table>
 
 1.  ``static`` 目录下的文件不被认为是模块化的，请直接在页面上使用script或link标签引用。
