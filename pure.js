@@ -74,10 +74,6 @@ fis.config.merge({
             //只是内嵌，不用发布
             release: false
         }, {
-            reg: /.*\.(html|jsp|tpl|vm|htm|asp|aspx|atpl|stpl)/,
-            useCache: false,
-            release: '${project.name}/$&'
-        }, {
             reg: "README.md",
             release: false
         }, {
@@ -94,7 +90,9 @@ fis.config.merge({
         postpackager: {
             simple: {
                 //设置是否自动将零散资源进行打包
-                autoCombine: true
+                autoCombine: true,
+                //设置是否自动优化脚本与样式资源引用位置
+                autoReflow: true
             }
         },
         jshint: {
