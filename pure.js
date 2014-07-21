@@ -57,8 +57,9 @@ fis.config.merge({
             id: '$1',
             release: '${statics}/${project.name}/$&'
         }, {
-            //less的mixin文件无需发布
-            reg: /^(.*)mixin\.less$/i,
+            //bootstrap/less文件夹不发布
+            reg: /^\/bootstrap\/less\/(.*)$/i,
+            useParser: false,
             release: false
         }, {
             //其他css文件
@@ -93,21 +94,24 @@ fis.config.merge({
                 autoCombine: true,
                 //设置是否自动优化脚本与样式资源引用位置
                 autoReflow: true
+            },
+            autoload: {
+                useInlineMap: true
             }
         },
-        jshint: {
-            //using Chinese reporter
-            i18n: 'zh-CN',
-            camelcase: true,
-            curly: true,
-            eqeqeq: true,
-            forin: true,
-            immed: true,
-            latedef: true,
-            newcap: true,
-            noarg: true,
-            noempty: true,
-            node: true
+        lint: {
+            jshint: {
+                camelcase: true,
+                curly: true,
+                eqeqeq: true,
+                forin: true,
+                immed: true,
+                latedef: true,
+                newcap: true,
+                noarg: true,
+                noempty: true,
+                node: true
+            }
         }
     },
     project: {

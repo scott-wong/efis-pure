@@ -1,6 +1,6 @@
 {
   "name": "efis-pure",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "A pure front end module solution with modjs.",
   "main": "pure.js",
   "bin": {
@@ -8,6 +8,7 @@
     "efis-pure": "bin/pure"
   },
   "scripts": {
+    "uninstall": "node bin/pure server stop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
