@@ -2,6 +2,19 @@ var fis = module.exports = require('fis');
 
 fis.cli.name = 'efis-pure';
 fis.cli.info = fis.util.readJSON(__dirname + '/package.json');
+//output version info
+fis.cli.version = function(){
+    var content = [
+        '',
+        '  v' + fis.cli.info.version,
+        '',
+        '  ╔═╗╔═╗╦╔═╗',
+        '  ║╣  ╠╣  ║╚═╗',
+        '  ╚═╝╚    ╩╚═╝',
+        ''
+    ].join('\n');
+    console.log(content);
+};
 
 fis.config.merge({
     statics: '/static',
