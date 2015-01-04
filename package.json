@@ -21,7 +21,7 @@
   "author": "scott-wong",
   "license": "BSD",
   "dependencies": {
-    "fis": "1.8.x",
+    "fis": ">=1.8.13",
     "fis-parser-artc": "0.0.x",
     "fis-parser-less": "0.1.x",
     "fis-parser-swig": "0.0.x",
