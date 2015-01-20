@@ -3,7 +3,7 @@ var fis = module.exports = require('fis');
 fis.cli.name = 'efis-pure';
 fis.cli.info = fis.util.readJSON(__dirname + '/package.json');
 //output version info
-fis.cli.version = function(){
+fis.cli.version = function() {
     var content = [
         '',
         '  v' + fis.cli.info.version,
@@ -24,6 +24,9 @@ fis.config.merge({
             tmpl: 'utc',
             atpl: 'artc',
             stpl: 'swig'
+        },
+        postprocessor: {
+            css: 'cssprefixer'
         },
         postprocessor: {
             js: 'jswrapper, require-async',
@@ -70,9 +73,8 @@ fis.config.merge({
             id: '$1',
             release: '${statics}/${project.name}/$&'
         }, {
-            //bootstrap/less文件夹不发布
-            reg: /^\/bootstrap\/less\/(.*)$/i,
-            useParser: false,
+            //mixins文件夹不发布
+            reg: /^(.*)\/mixins\/(.*)$/i,
             release: false
         }, {
             //其他css文件
@@ -88,14 +90,21 @@ fis.config.merge({
             //只是内嵌，不用发布
             release: false
         }, {
-            reg: "README.md",
+            reg: 'README.md',
             release: false
         }, {
-            reg: "**",
+            reg: '**',
             release: '${statics}/${project.name}/$&'
         }]
     },
     settings: {
+        preprocessor: {
+            cssprefixer: {
+                // detail config (https://github.com/postcss/autoprefixer#browsers)
+                browsers: ['FireFox > 1', 'Chrome > 1', 'ie >= 8'],
+                cascade: true
+            }
+        },
         postprocessor: {
             jswrapper: {
                 type: 'amd'

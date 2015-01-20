@@ -1,35 +1,36 @@
 {
-  "name": "efis-pure",
-  "version": "0.2.14",
-  "description": "A pure front end module solution with modjs.",
-  "main": "efis.js",
-  "bin": {
-    "efis": "bin/efis",
-    "efis-pure": "bin/efis"
-  },
-  "scripts": {
-    "uninstall": "node bin/efis server stop",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/scott-wong/efis-pure.git"
-  },
-  "keywords": [
-    "fis", "efis"
-  ],
-  "author": "scott-wong",
-  "license": "MIT",
-  "dependencies": {
-    "fis": "~1.9.x",
-    "fis-parser-artc": "0.0.x",
-    "fis-parser-less": "0.1.x",
-    "fis-parser-swig": "0.0.x",
-    "fis-parser-utc": "0.0.x",
-    "fis-postprocessor-require-async": "0.0.x",
-    "fis-postpackager-autoload": "0.0.x",
-    "fis-postpackager-simple": "0.0.x",
-    "fis-postpackager-html-minifier": "0.0.x",
-    "fis-lint-jshint": "0.0.x"
-  }
+    "name": "efis-pure",
+    "version": "0.3.0",
+    "description": "A pure front end module solution with modjs.",
+    "main": "efis.js",
+    "bin": {
+        "efis": "bin/efis",
+        "efis-pure": "bin/efis"
+    },
+    "scripts": {
+        "uninstall": "node bin/efis server stop",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/scott-wong/efis-pure.git"
+    },
+    "keywords": [
+        "fis", "efis"
+    ],
+    "author": "scott-wong",
+    "license": "MIT",
+    "dependencies": {
+        "fis": "~1.9.x",
+        "fis-parser-artc": "0.0.x",
+        "fis-parser-less": "0.1.x",
+        "fis-parser-swig": "0.0.x",
+        "fis-parser-utc": "0.0.x",
+        "fis-preprocessor-cssprefixer": "0.0.2",
+        "fis-postprocessor-require-async": "0.0.x",
+        "fis-postpackager-autoload": "0.0.x",
+        "fis-postpackager-simple": "0.0.x",
+        "fis-postpackager-html-minifier": "0.0.x",
+        "fis-lint-jshint": "0.0.x"
+    }
 }
