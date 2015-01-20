@@ -1,7 +1,7 @@
-var fis = module.exports = require('fis');
+var fis = module.exports = require('fis')
 
-fis.cli.name = 'efis-pure';
-fis.cli.info = fis.util.readJSON(__dirname + '/package.json');
+fis.cli.name = 'efis-pure'
+fis.cli.info = fis.util.readJSON(__dirname + '/package.json')
 //output version info
 fis.cli.version = function() {
     var content = [
@@ -12,9 +12,9 @@ fis.cli.version = function() {
         '  ║╣  ╠╣  ║╚═╗',
         '  ╚═╝╚    ╩╚═╝',
         ''
-    ].join('\n');
-    console.log(content);
-};
+    ].join('\n')
+    console.log(content)
+}
 
 fis.config.merge({
     statics: '/static',
@@ -25,7 +25,7 @@ fis.config.merge({
             atpl: 'artc',
             stpl: 'swig'
         },
-        postprocessor: {
+        preprocessor: {
             css: 'cssprefixer'
         },
         postprocessor: {
@@ -141,4 +141,4 @@ fis.config.merge({
             text: ['atpl', 'stpl']
         }
     }
-});
+})
