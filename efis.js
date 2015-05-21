@@ -132,15 +132,16 @@ fis.config.merge({
     },
     lint: {
       jshint: {
-        asi: false,
+        asi: true,
         camelcase: true,
         curly: true,
         eqeqeq: true,
-        immed: true,
+        eqnull: true,
+        expr:true,
+        funcscope:true,
         latedef: true,
-        newcap: true,
+        //newcap: true,
         noarg: true,
-        noempty: true,
         node: true,
         sub: true,
         undef: true

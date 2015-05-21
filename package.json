@@ -1,6 +1,6 @@
 {
     "name": "efis-pure",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "description": "A pure front end module solution with modjs.",
     "main": "efis.js",
     "bin": {
@@ -21,7 +21,7 @@
     "author": "scott-wong",
     "license": "MIT",
     "dependencies": {
-        "fis": "~1.9.x",
+        "fis": "1.9.21",
         "fis-parser-artc": "0.0.x",
         "fis-parser-less": "0.1.x",
         "fis-parser-swig": "0.0.x",
